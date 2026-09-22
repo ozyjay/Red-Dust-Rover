@@ -8,7 +8,7 @@ right now while you're testing it locally.
 `app.py` starts a small Python web server using Flask. When you run:
 
 ```bash
-python app.py
+python3 app.py
 ```
 
 Flask starts listening on your own computer at:
@@ -23,7 +23,7 @@ uploaded to the internet - the whole app runs locally on your machine.
 ## 2. The browser talks to Flask, Flask talks back with HTML/JSON
 
 - When you open `http://127.0.0.1:5000/` in a browser, Flask runs the
-  `home()` function in [app.py](red-dust-rover/app.py) and sends back
+  `home()` function in [app.py](app.py) and sends back
   the rendered `index.html` page.
 - When you click "Launch the Simulator", the browser asks for
   `/simulator`, and Flask sends back `simulator.html`.
