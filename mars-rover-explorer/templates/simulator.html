@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Mars Rover Explorer - Simulator{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    <!-- Left column: the terrain canvas and controls -->
+    <div class="col-lg-8">
+        <div class="d-flex flex-wrap gap-2 mb-3">
+            <button id="btn-generate" class="btn btn-outline-light control-btn">
+                🌍 Generate New Terrain
+            </button>
+            <button id="btn-astar" class="btn btn-success control-btn">
+                ⭐ Run A* Navigation
+            </button>
+            <button id="btn-bfs" class="btn btn-primary control-btn">
+                🌊 Run Breadth First Search
+            </button>
+            <button id="btn-step" class="btn btn-warning control-btn">
+                👣 Step Through Algorithm
+            </button>
+            <button id="btn-reset" class="btn btn-outline-danger control-btn">
+                🔄 Reset
+            </button>
+        </div>
+
+        <div class="canvas-wrapper text-center">
+            <canvas id="terrain-canvas" width="600" height="600"></canvas>
+        </div>
+
+        <div class="form-check form-switch text-center mt-2">
+            <input class="form-check-input" type="checkbox" id="toggle-realistic-bg">
+            <label class="form-check-label" for="toggle-realistic-bg">
+                🌄 Bonus: Realistic Mars Background
+            </label>
+        </div>
+
+        <div class="legend mt-3 d-flex flex-wrap gap-3 justify-content-center">
+            <span><span class="swatch swatch-rover"></span> Rover</span>
+            <span><span class="swatch swatch-target"></span> Target</span>
+            <span><span class="swatch swatch-rock"></span> Rock</span>
+            <span><span class="swatch swatch-crater"></span> Crater</span>
+            <span><span class="swatch swatch-sand"></span> Sand</span>
+            <span><span class="swatch swatch-frontier"></span> Exploring</span>
+            <span><span class="swatch swatch-visited"></span> Explored</span>
+            <span><span class="swatch swatch-path"></span> Final Path</span>
+        </div>
+    </div>
+
+    <!-- Right column: educational side panel -->
+    <div class="col-lg-4">
+        <div class="card mb-3 explain-card">
+            <div class="card-body">
+                <h5 class="card-title">🧠 What is happening?</h5>
+                <p id="explanation-text" class="card-text">
+                    Press "Run A* Navigation" or "Run Breadth First Search" to
+                    watch the rover plan a route!
+                </p>
+            </div>
+        </div>
+
+        <div class="card mb-3 challenge-card">
+            <div class="card-body">
+                <h5 class="card-title">🏆 Challenge Mode</h5>
+                <p class="card-text small">
+                    Can you design terrain that tricks the rover into taking
+                    a longer path?
+                </p>
+                <ul class="list-unstyled mb-0">
+                    <li>📏 Path length: <strong id="stat-path-length">-</strong></li>
+                    <li>🔍 Cells explored: <strong id="stat-cells-explored">-</strong></li>
+                    <li>⏱️ Time taken: <strong id="stat-time-taken">-</strong> ms</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mars-fact-card">
+            <div class="card-body">
+                <h5 class="card-title">📡 Real Mars Facts</h5>
+                <p id="mars-fact-text" class="card-text small">Loading a fact...</p>
+                <button id="btn-new-fact" class="btn btn-sm btn-outline-secondary">
+                    Show me another fact
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/simulator.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Mars Rover Explorer - Home{% endblock %}
+
+{% block content %}
+<div class="text-center hero-section p-5 rounded-4 mb-4">
+    <h1 class="display-4 fw-bold">🚀 Mars Rover Explorer 🔴</h1>
+    <p class="lead mt-3">
+        Ever wondered how a robot millions of kilometres away decides where
+        to drive? Real Mars rovers can't just ask for directions - radio
+        signals take too long, and there's no GPS on Mars!
+    </p>
+    <p class="fs-5">
+        Instead, rovers use clever <strong>search algorithms</strong> to plan
+        a safe path around rocks and craters, all by themselves.
+    </p>
+    <a href="{{ url_for('simulator') }}" class="btn btn-launch btn-lg mt-3">
+        🛰️ Launch the Simulator
+    </a>
+</div>
+
+<div class="row g-4 text-center">
+    <div class="col-md-4">
+        <div class="card h-100 info-card">
+            <div class="card-body">
+                <div class="fs-1">🪨</div>
+                <h5 class="card-title">Obstacles</h5>
+                <p class="card-text">
+                    Rocks and craters block the rover's path, while sandy
+                    ground just slows it down.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 info-card">
+            <div class="card-body">
+                <div class="fs-1">🧭</div>
+                <h5 class="card-title">Search Algorithms</h5>
+                <p class="card-text">
+                    Watch Breadth First Search and A* explore the map step by
+                    step until they find a route to the target.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 info-card">
+            <div class="card-body">
+                <div class="fs-1">🎯</div>
+                <h5 class="card-title">Your Challenge</h5>
+                <p class="card-text">
+                    Design tricky terrain of your own - can you slow the
+                    rover down or make it take the long way round?
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

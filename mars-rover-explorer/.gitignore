@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Flask
+instance/
+.flaskenv
+
+# Environment variables
+.env
+
+# IDE / editor
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
