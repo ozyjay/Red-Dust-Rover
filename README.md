@@ -23,7 +23,7 @@ runs.
 ## Project structure
 
 ```
-red-dust-rover/
+Red-Dust-Rover/
 │
 ├── app.py                  # Flask app and REST API endpoints
 ├── requirements.txt
@@ -71,8 +71,9 @@ animation), and stats (`path_length`, `cells_explored`, `time_taken_ms`).
 Requires **Python 3.12+**.
 
 ```bash
-cd red-dust-rover
-python -m venv .venv
+git clone https://github.com/ozyjay/Red-Dust-Rover.git
+cd Red-Dust-Rover
+python3 -m venv .venv
 source .venv/bin/activate   # on Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
@@ -80,7 +81,7 @@ pip install -r requirements.txt
 ## Run instructions
 
 ```bash
-python app.py
+python3 app.py
 ```
 
 Then open your browser to:
