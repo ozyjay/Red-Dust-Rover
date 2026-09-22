@@ -1,4 +1,4 @@
-"""Mars Rover Explorer - a Flask web app that teaches students how
+"""Red Dust Rover - a Flask web app that teaches students how
 autonomous rovers navigate obstacles using search algorithms.
 
 Run with:

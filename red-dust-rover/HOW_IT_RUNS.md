@@ -1,6 +1,6 @@
 # How This App Is Running (Simple Explanation)
 
-This document explains, in plain terms, how the Mars Rover Explorer app works
+This document explains, in plain terms, how the Red Dust Rover app works
 right now while you're testing it locally.
 
 ## 1. It's a Flask web server
@@ -23,7 +23,7 @@ uploaded to the internet - the whole app runs locally on your machine.
 ## 2. The browser talks to Flask, Flask talks back with HTML/JSON
 
 - When you open `http://127.0.0.1:5000/` in a browser, Flask runs the
-  `home()` function in [app.py](mars-rover-explorer/app.py) and sends back
+  `home()` function in [app.py](red-dust-rover/app.py) and sends back
   the rendered `index.html` page.
 - When you click "Launch the Simulator", the browser asks for
   `/simulator`, and Flask sends back `simulator.html`.

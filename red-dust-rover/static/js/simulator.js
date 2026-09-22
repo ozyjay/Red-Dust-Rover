@@ -1,5 +1,5 @@
 /**
- * Mars Rover Explorer - simulator front-end.
+ * Red Dust Rover - simulator front-end.
  *
  * Handles: drawing the terrain grid on a canvas, calling the Flask API to
  * generate terrain and run search algorithms, and animating the results so

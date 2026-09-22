@@ -1,4 +1,4 @@
-# 🔴 Mars Rover Explorer
+# 🔴 Red Dust Rover
 
 An interactive Flask web app that teaches school students (Years 5-9) how
 autonomous Mars rovers navigate around obstacles using real search
@@ -23,7 +23,7 @@ runs.
 ## Project structure
 
 ```
-mars-rover-explorer/
+red-dust-rover/
 │
 ├── app.py                  # Flask app and REST API endpoints
 ├── requirements.txt
@@ -71,7 +71,7 @@ animation), and stats (`path_length`, `cells_explored`, `time_taken_ms`).
 Requires **Python 3.12+**.
 
 ```bash
-cd mars-rover-explorer
+cd red-dust-rover
 python -m venv .venv
 source .venv/bin/activate   # on Windows: .venv\Scripts\activate
 pip install -r requirements.txt
